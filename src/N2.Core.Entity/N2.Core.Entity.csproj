@@ -4,14 +4,50 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <UserSecretsId>aspnet-BlazorAppOne-0c368d89-5cb3-4451-9c68-b79e69920a09</UserSecretsId>
+    <LangVersion>12</LangVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <Title>N2-Core-Entity</Title>
+    <Company>Kaalenco</Company>
+    <Copyright>(c) 2024 - rights reserved</Copyright>
+    <Authors>gjkaal</Authors>
+    <Description>Library for standardized use of data contexts</Description>
+    <IncludeSymbols>False</IncludeSymbols>
+    <PackageVersion>1.0.3</PackageVersion>
+    <PackageLicenseExpression>AFL-3.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/kaalenco/n2-core-entity</PackageProjectUrl>
+    <PackageId>n2.core.entity</PackageId>
+
+    <PackageType>Dependency</PackageType>
+    <Product>N2.Core for NET8.0</Product>
+    <ProductName>N2.Core</ProductName>
+    <ProductVersion>1.0.0</ProductVersion>
+    
+    <RootNamespace>N2.Core.Entity</RootNamespace>
+    <UserSecretsId>N2-Core-0c368d89-5cb3-4451-9c68-b79e69920a09</UserSecretsId>
+
+    <NoWarn>
+      CS1591;
+      CA2007;
+      CA1819;
+    </NoWarn>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="readme.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" />
     <PackageReference Include="Microsoft.Extensions.Configuration" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" />
@@ -20,9 +56,7 @@
     <PackageReference Include="System.IO.Abstractions" />
     <PackageReference Include="N2.Contracts" />
     <PackageReference Include="n2.core.abstractions" />
+    <PackageReference Include="n2.core.entity.abstractions" />
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\N2.Core.Entity.Abstractions\N2.Core.Entity.Abstractions.csproj" />
-  </ItemGroup>
+  
 </Project>

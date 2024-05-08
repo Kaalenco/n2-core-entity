@@ -11,10 +11,10 @@ public abstract class CoreDataContext(DbContextOptions options) : DbContext(opti
     public string CurrentDatabaseName => Database.GetDbConnection().Database;
 
     public void AddChangeLog<T>(
-    Guid publicId,
-    string message,
-    Guid userId,
-    string userName)
+        Guid publicId,
+        string message,
+        Guid userId,
+        string userName)
     where T : class
     {
         var logEntry = new ChangeLog
@@ -123,7 +123,7 @@ public abstract class CoreDataContext(DbContextOptions options) : DbContext(opti
     {
         base.OnModelCreating(modelBuilder);
 
-        // Add model configurations for generic tables
-        Entity.ChangeLog.BuildModel(modelBuilder);
+        // Add the ChangeLog model(s) to the data context.
+        ChangeLogBuilder.BuildModel(modelBuilder);
     }
 }
