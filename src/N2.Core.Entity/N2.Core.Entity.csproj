@@ -14,7 +14,7 @@
     <Authors>gjkaal</Authors>
     <Description>Library for standardized use of data contexts</Description>
     <IncludeSymbols>False</IncludeSymbols>
-    <PackageVersion>1.0.3</PackageVersion>
+    <PackageVersion>1.0.4</PackageVersion>
     <PackageLicenseExpression>AFL-3.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/kaalenco/n2-core-entity</PackageProjectUrl>
     <PackageId>n2.core.entity</PackageId>
@@ -47,16 +47,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" />
-    <PackageReference Include="System.IO.Abstractions" />
-    <PackageReference Include="N2.Contracts" />
-    <PackageReference Include="n2.core.abstractions" />
-    <PackageReference Include="n2.core.entity.abstractions" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
+    <PackageReference Include="System.IO.Abstractions" Version="21.0.2" />
+    <PackageReference Include="N2.Contracts" Version="1.0.7" />
+    <PackageReference Include="n2.core.abstractions" Version="1.0.3"/>
+    <PackageReference Include="n2.core.entity.abstractions" Version="1.0.3" />
   </ItemGroup>
   
 </Project>
