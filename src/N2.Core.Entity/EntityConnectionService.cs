@@ -25,7 +25,7 @@ public class EntityConnectionService : IConnectionStringService
 
     public EntityConnectionService(IDirectoryInfo directory)
     {
-        Contracts.Requires(directory, nameof(directory));
+        ArgumentNullException.ThrowIfNull(directory);
         if (!directory.Exists)
         {
             throw new EntityConnectionException($"Directory not found: {directory.FullName}");

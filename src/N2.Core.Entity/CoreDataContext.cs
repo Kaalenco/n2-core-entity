@@ -105,6 +105,7 @@ public abstract class CoreDataContext(DbContextOptions options) : DbContext(opti
     }
 
     public abstract Task<List<KeyValuePair<string, string>>> GetSelectListAsync(string tableName);
+
     public async Task<(int code, string message)> SaveChangesAsync()
     {
         // Check if ChangeLog needs to be updated

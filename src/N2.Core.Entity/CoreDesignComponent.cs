@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using N2.Core.Identity;
 using System.Collections.ObjectModel;
 using System.Diagnostics.CodeAnalysis;
-using N2.Core.Identity;
 
 namespace N2.Core.Entity;
 
@@ -137,7 +137,7 @@ public abstract class CoreDesignComponent<TContext, TData, TView, TDetail> : IDe
     {
         if (userContext == null)
         {
-            return  new RequestResult(403, "Unauthorized");
+            return new RequestResult(403, "Unauthorized");
         }
         if (!CanDesign(userContext, publicId))
         {

@@ -4,7 +4,11 @@ public static class DbRecordExtensions
 {
     public static void UpdateTracking(this IDbBaseModel dbRecord, Guid userId)
     {
-        if (dbRecord == null) return;
+        if (dbRecord == null)
+        {
+            return;
+        }
+
         dbRecord.Modified = DateTime.UtcNow;
         if (userId != Guid.Empty)
         {
@@ -14,7 +18,11 @@ public static class DbRecordExtensions
 
     public static void InitTracking(this IModifiable model, Guid publicId, Guid userId)
     {
-        if (model == null) return;
+        if (model == null)
+        {
+            return;
+        }
+
         model.DbItem = false;
         model.PublicId = publicId;
         model.Created = DateTime.UtcNow;
@@ -28,7 +36,11 @@ public static class DbRecordExtensions
 
     public static void TrackingSetCreated(this IDbBaseModel dbRecord, Guid userId)
     {
-        if (dbRecord == null) return;
+        if (dbRecord == null)
+        {
+            return;
+        }
+
         dbRecord.Created = DateTime.UtcNow;
         dbRecord.Modified = DateTime.UtcNow;
         if (userId != Guid.Empty)
@@ -40,8 +52,16 @@ public static class DbRecordExtensions
 
     public static void ReadTracking(this IModifiable model, IDbBaseModel dbRecord)
     {
-        if (model == null) return;
-        if (dbRecord == null) return;
+        if (model == null)
+        {
+            return;
+        }
+
+        if (dbRecord == null)
+        {
+            return;
+        }
+
         model.DbItem = true;
         model.PublicId = dbRecord.PublicId;
         model.Created = dbRecord.Created;
